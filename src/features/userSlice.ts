@@ -6,12 +6,14 @@ import { RootState } from '../utils/Store';
 export interface UserState {
   loading: boolean;
   user: User | null;
+  currentId: number | undefined;
   error: string | undefined;
 }
 
 const initialState: UserState = {
   loading: false,
   user: null,
+  currentId: undefined,
   error: undefined,
 };
 
@@ -48,7 +50,7 @@ const userSlice = createSlice({
     });
     builder.addCase(createUser.fulfilled, (state, action) => {
       state.loading = false;
-      state.user = action.payload.data.id;
+      state.currentId = action.payload.data.id;
     });
     builder.addCase(createUser.rejected, (state, action) => {
       state.loading = false;

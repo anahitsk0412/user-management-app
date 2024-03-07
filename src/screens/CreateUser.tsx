@@ -1,6 +1,6 @@
 import { FormControl, Box, TextField, Button } from '@mui/material';
 import { useFormik } from 'formik';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as yup from 'yup';
 
@@ -31,7 +31,6 @@ const validationSchema = yup.object({
 
 export const CreateUserScreen: React.FC = () => {
   const navigate = useNavigate();
-  const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | undefined>(undefined);
 
   const createdUser = useAppSelector(userSelector);
@@ -45,9 +44,9 @@ export const CreateUserScreen: React.FC = () => {
       phoneNumber: '',
     },
     validationSchema: validationSchema,
-    onSubmit: (values) => {
+    onSubmit: (values, { resetForm }) => {
       dispatch(createUser(values));
-      navigate('/user');
+      resetForm();
     },
   });
 

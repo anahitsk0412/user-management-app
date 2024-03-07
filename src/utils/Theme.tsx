@@ -84,4 +84,11 @@ export const UserManagementTheme = createTheme({
       },
     },
   },
+  typography: {
+    subtitle2: {
+      fontSize: '16px',
+      fontWeight: 600,
+      paddingRight: '10px',
+    },
+  },
 });
