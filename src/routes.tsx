@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import { CreateUserScreen } from './screens/users/CreateUser';
-import { CurrentUserScreen } from './screens/users/CurrentUser';
+import { CreateUserScreen } from './screens/CreateUser';
+import { CurrentUserScreen } from './screens/CurrentUser';
 
 export const routes = [
   { path: '/', element: <CreateUserScreen />, label: 'Form' },

@@ -1,4 +1,6 @@
+import styled from '@emotion/styled';
 import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
 import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import { ReactNode } from 'react';
@@ -37,15 +39,23 @@ const Layout = () => {
   return (
     <CustomRouter>
       <Box sx={{ width: '100%' }}>
-        <MyTabs />
-        <Routes>
-          {routes.map((route: RouteInterface) => (
-            <Route path={route.path} element={route.element} key={route.label} />
-          ))}
-        </Routes>
+        <Container>
+          <MyTabs />
+          <StyledBox>
+            <Routes>
+              {routes.map((route: RouteInterface) => (
+                <Route path={route.path} element={route.element} key={route.label} />
+              ))}
+            </Routes>
+          </StyledBox>
+        </Container>
       </Box>
     </CustomRouter>
   );
 };
 
 export default Layout;
+
+const StyledBox = styled(Box)(() => ({
+  maxWidth: '400px',
+}));

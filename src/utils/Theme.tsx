@@ -60,19 +60,17 @@ declare module '@mui/material/Typography' {
 export const UserManagementTheme = createTheme({
   palette: palette,
   components: {
-    MuiFormControlLabel: {
-      styleOverrides: {
-        label: {
-          fontSize: '1rem',
-          fontWeight: 700,
-          color: palette.secondary.dark,
-        },
-      },
-    },
     MuiFormGroup: {
       styleOverrides: {
         root: {
           padding: '10px',
+        },
+      },
+    },
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          marginTop: '20px',
         },
       },
     },
@@ -82,13 +80,6 @@ export const UserManagementTheme = createTheme({
           boxShadow: 'none',
           borderRadius: '10px',
           fontSize: '1rem',
-        },
-      },
-    },
-    MuiInputBase: {
-      styleOverrides: {
-        input: {
-          background: palette.common.white,
         },
       },
     },
