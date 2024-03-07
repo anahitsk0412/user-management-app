@@ -47,10 +47,11 @@ const userSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(createUser.pending, (state, action) => {
       state.loading = true;
+      state.error = undefined;
     });
     builder.addCase(createUser.fulfilled, (state, action) => {
       state.loading = false;
-      state.currentId = action.payload.data.id;
+      (state.error = undefined), (state.currentId = action.payload.data.id);
     });
     builder.addCase(createUser.rejected, (state, action) => {
       state.loading = false;
@@ -59,10 +60,11 @@ const userSlice = createSlice({
 
     builder.addCase(getUser.pending, (state, action) => {
       state.loading = true;
+      state.error = undefined;
     });
     builder.addCase(getUser.fulfilled, (state, action) => {
       state.loading = false;
-      state.user = action.payload.data;
+      (state.error = undefined), (state.user = action.payload.data);
     });
     builder.addCase(getUser.rejected, (state, action) => {
       state.loading = false;
