@@ -1,30 +1,30 @@
-# Getting Started with Create React App
+# User Management App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+User Management App provides UI to create a user and view created user data.
 
-In the project directory, you can run:
+## Installation
 
-### `yarn start`
+### Make sure you have node latest stable version(20.11.*) installed in your machine.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+If you have no node inatlled, follow the link [Node](https://nodejs.org/en) to download and install latest stable version of node.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The app may also run on older versions of node but we recommend to use the latest stable version.
 
-### `yarn test`
+### Make sure you have yarn installed in your machine.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+If yarn is not installed, use the following link to install it: [Yarn](https://yarnpkg.com/getting-started/install)
 
-### `yarn run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Running the app
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+cd <YOUR_PROJECT_DIR>
+# Run docker in terminal
+$ yarn install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# development
+$ yarn run start
+
+```
