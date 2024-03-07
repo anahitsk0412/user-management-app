@@ -1,6 +1,6 @@
-import { Grid, Typography, Skeleton } from '@mui/material';
+import { Typography } from '@mui/material';
 
-import { ReactNode, useState } from 'react';
+import { useState } from 'react';
 
 import { StyledCard, StyledCardContent } from './StyledCardMedia';
 import { User } from '../models/User';
