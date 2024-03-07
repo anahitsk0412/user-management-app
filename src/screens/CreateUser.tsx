@@ -1,4 +1,4 @@
-import { FormControl, Box, TextField, Button } from '@mui/material';
+import { FormControl, TextField, Button } from '@mui/material';
 import { useFormik } from 'formik';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -47,6 +47,7 @@ export const CreateUserScreen: React.FC = () => {
     onSubmit: (values, { resetForm }) => {
       dispatch(createUser(values));
       resetForm();
+      navigate('/user');
     },
   });
 
